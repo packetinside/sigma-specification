@@ -243,37 +243,35 @@ rest: //any
 
 ![sigma_schema](./images/Sigma_Schema.png)
 
-##  Components
+##  구성 요소 (Components)
 
 ###  Title
 
-**Attribute:** title
+**속성:** title
 
-A brief title for the rule that should contain what the rules is supposed to detect (max. 256 characters)
+탐지명 (최대 256자)
 
 ### Rule Identification
 
-**Attributes:** id, related
+**속성:** id, related
 
-Sigma rules should be identified by a globally unique identifier in the *id* attribute. For this
-purpose randomly generated UUIDs (version 4) are recommended but not mandatory. An example for this
-is:
+시그마 룰의 *id* 속성은 고유한 값을 사용해야 함 
+이를 위해 무작위로 생성된 UUID(버전 4)를 사용하는 것이 좋지만 필수는 아님
+예제는 다음과 같습니다.
 
 ```yml
 title: Test rule
 id: 929a690e-bef0-4204-a928-ef5e620d6fcc
 ```
 
-Rule identifiers can and should change for the following reasons:
+룰의 식별자는 다음과 같은 이유로 변경될 수 있음:
 
-* Major changes in the rule. E.g. a different rule logic.
-* Derivation of a new rule from an existing or refinement of a rule in a way that both are kept
-  active.
-* Merge of rules.
+* 룰의 주요 변경 사항
+* 기존 규칙에서 새 규칙을 파생하거나 규칙을 세분화하면서 둘 다 활성 상태로 유지하는 경우
+* 룰의 병합
 
-To be able to keep track of the relationships between detections, Sigma rules may also contain
-references to related rule identifiers in the *related* attribute. This allows to define common
-relationships between detections as follows:
+탐지 간의 관계를 추적할 수 있도록 시그마 규칙은 *관련* 속성에 관련 규칙 식별자에 대한 참조를 포함할 수도 있습니다.
+이를 통해 다음과 같이 탐지 간의 공통 관계를 정의할 수 있습니다:
 
 ```yml
 related:
