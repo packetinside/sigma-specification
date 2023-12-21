@@ -55,34 +55,33 @@ The following document defines the different aspects of the SIGMA specification.
 
 # YAML File
 
-## Filename
+## 파일명 (Filename)
 
-To keep the file names interoperable use the following:
+파일명 작성 규칙:
 
-- Length between 10 and 70 characters
-- Lowercase
-- No special characters only letters (a-z) and digits (0-9)
-- Use `_` instead of a space
-- Use `.yml` as a file extension
+- 파일명의 길이는 10 ~ 70자
+- 소문자로 입력
+- 특수 문자 없이 문자(a~z)와 숫자(0~9)만 입력
+- 공백 대신 `_` 문자 사용
+- 파일의 확장자는 `.yml` 사용
 
-example:
+예제:
 
 - lnx_auditd_change_file_time_attr.yml
 - web_cve_2022_33891_spark_shell_command_injection.yml
 - sysmon_file_block_exe.yml
 
-## Data
+## 데이터 (Data)
 
-The rule files are written in [yaml format](https://yaml.org/spec/1.2.2/)
-To keep the rules interoperable use the following:
+룰 작성 규칙 [yaml format](https://yaml.org/spec/1.2.2/)
 
 - UTF-8
-- LF for the line break (the Windows native editor uses CR-LF)
-- Indentation of 4 spaces
-- Lowercase keys (e.g. title, id, etc.)
-- Single quotes `'` for strings and numeric values don't use any quotes (if the string contains a single quote, double quotes may be used instead)
+- 줄 바꿈에 LF(Windows 기본 편집기는 CR-LF 사용)
+- 4칸 들여쓰기
+- 소문자 키(예: title, id, etc.)
+- 문자열 및 숫자 값에 작은따옴표 `'`는 따옴표를 사용하지 않음 (단, 문자열에 작은따옴표가 포함된 경우 큰따옴표를 대신 사용할 수 있음)
 
-Simple Sigma example
+간단한 Sigma 예제
 
 ```yaml
 title: Whoami Execution
@@ -101,9 +100,9 @@ detection:
 level: high
 ```
 
-# Structure
+# 구조 (Structure)
 
-The rules consist of a few required sections and several optional ones.
+룰은 몇 가지 필수 항목과 선택 항목으로 구성되어 있음음
 
 ```yaml
 title
@@ -138,7 +137,7 @@ level [optional]
 [arbitrary custom fields]
 ```
 
-## Schema
+## 스키마 (Schema)
 
 ### Rx YAML
 
