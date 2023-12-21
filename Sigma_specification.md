@@ -61,7 +61,7 @@ The following document defines the different aspects of the SIGMA specification.
 
 - 파일명의 길이는 10 ~ 70자
 - 소문자로 입력
-- 특수 문자 없이 문자(a~z)와 숫자(0~9)만 입력
+- 특수 문자 없이 문자(a ~ z)와 숫자(0 ~ 9)만 입력
 - 공백 대신 `_` 문자 사용
 - 파일의 확장자는 `.yml` 사용
 
